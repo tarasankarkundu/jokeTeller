@@ -1,0 +1,65 @@
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;  
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  background: url(./jokeTeller.gif) no-repeat;
+  background-size: contain;
+}
+
+button {
+  padding: 10px;
+  background: #d71025;
+  border: none;
+  border-radius: 5px;
+  color:#fff;
+  cursor: pointer;
+  height:50px;
+  width: 180px;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+  position:fixed;
+  bottom:50%;
+  left:50%;
+  transform: translate(-50%, 50%);
+  font-size: 1rem;
+}
+
+button:hover{
+  filter: brightness(90%);
+}
+button:active {
+  transform: translate(-50%, 50%) scale(0.95);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(70%);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-position: center center;
+    background-size: cover;
+  }
+
+  button {
+    position:fixed;
+    bottom:10%;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  button:active {
+    transform: translateX(-50%) scale(0.95);
+  }
+}
+
